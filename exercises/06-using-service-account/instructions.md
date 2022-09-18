@@ -2,7 +2,8 @@
 
 In this exercise, you will create a ServiceAccount and assign it to a Pod.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or Minikube Cluster Setup in Ubuntu, refer this ["minikube clutser setup easy"](https://youtu.be/ZTO1doC8SOc).
+
 ## Using a ServiceAccount
 
 1. Create a new service account named `backend-team`.
