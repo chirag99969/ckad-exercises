@@ -2,7 +2,7 @@
 
 In this exercise, you will create a Pod running a NodeJS application. The Pod will define readiness and liveness probes with different parameters.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a Pod with a readiness Probe of type HTTP GET request"](https://learning.oreilly.com/scenarios/5-1-ckad-probing/9781098105105/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or Minikube Cluster Setup in Ubuntu, refer this ["minikube clutser setup easy"](https://youtu.be/ZTO1doC8SOc).
 
 ## Defining a Pod’s Readiness and Liveness Probe
 
