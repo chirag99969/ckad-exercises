@@ -2,7 +2,7 @@
 
 In this exercise, you will implement the adapter pattern for a multi-container Pod.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating a sidecar container"](https://learning.oreilly.com/scenarios/4-2-ckad-multi-container/9781098104993/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or Minikube Cluster Setup in Ubuntu, refer this ["minikube clutser setup easy"](https://youtu.be/ZTO1doC8SOc).
 
 ## Implementing the Adapter Pattern
 
