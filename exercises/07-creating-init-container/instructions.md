@@ -2,7 +2,7 @@
 
 In this exercise, you will initialize a web application by standing up environment-specific configuration through an init container.
 
-> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or you can use the Katacoda scenario ["Creating an init container"](https://learning.oreilly.com/scenarios/4-1-ckad-multi-container/9781098104986/).
+> **_NOTE:_** If you do not already have a cluster, you can create one by using minikube or Minikube Cluster Setup in Ubuntu, refer this ["minikube clutser setup easy"](https://youtu.be/ZTO1doC8SOc).
 
 ## Creating an Init Container
 
