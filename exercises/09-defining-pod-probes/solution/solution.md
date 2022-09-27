@@ -45,7 +45,7 @@ Rendering the logs of the Pod reveals additional log output.
 $ kubectl logs pod/hello
 Magic happens on port 3000
 
-$ k describe pod readiness-pod | grep -C 2  Readiness
+$ kubectl describe pod readiness-pod | grep -C 2  Readiness
 Ready:          True
     Restart Count:  0
     Readiness:      http-get http://:nodejs-port/ delay=2s timeout=1s period=8s #success=1 #failure=3
@@ -76,7 +76,7 @@ spec:
 ```
 
 ```shell
-$k describe pod liveness-pod | grep -C 2 Liveness:
+$ kubectl describe pod liveness-pod | grep -C 2 Liveness:
 
 Ready:          True
     Restart Count:  2
