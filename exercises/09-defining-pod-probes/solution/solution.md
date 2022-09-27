@@ -6,7 +6,7 @@ Create the intial YAML with the following command.
 $ kubectl run hello --image=bmuschko/nodejs-hello-world:1.0.0 --port=3000 -o yaml --dry-run=client --restart=Never > pod.yaml
 ```
 
-Edit the YAML file to add READINESS PROBE.
+### Edit the YAML file to add READINESS PROBE.
 
 ```yaml
 apiVersion: v1
@@ -51,5 +51,37 @@ Ready:          True
     Readiness:      http-get http://:nodejs-port/ delay=2s timeout=1s period=8s #success=1 #failure=3
     Environment:    <none>
     Mounts:
-
 ```
+
+### LIVENESS Probe 
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-pod
+spec:
+  containers:
+  - image: busybox
+    name: app
+    args:
+    - /bin/sh
+    - -c
+    - 'while true; do touch /tmp/heartbeat.txt; sleep 5; done;'
+    livenessProbe:
+      exec:
+        command:
+        - test `find /tmp/heartbeat.txt -mmin -1`
+      initialDelaySeconds: 5
+      periodSeconds: 30
+```
+
+```shell
+$k describe pod liveness-pod | grep -C 2 Liveness:
+
+Ready:          True
+    Restart Count:  2
+    Liveness:       exec [test `find /tmp/heartbeat.txt -mmin -1`] delay=5s timeout=1s period=30s #success=1 #failure=3
+    Environment:    <none>
+    Mounts:
+```
+
